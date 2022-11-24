@@ -17,7 +17,7 @@ index 1859938..3be726d 100644
 +  set_target_properties(
 +    ROOT::rootcling
 +    PROPERTIES
-+    IMPORTED_LOCATION_NOCONFIG "${ROOT_rootcling_CMD}"
++    IMPORTED_LOCATION "${ROOT_rootcling_CMD}"
 +  )
 +endif()
 +

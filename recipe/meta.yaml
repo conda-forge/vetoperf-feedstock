@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 4
+  number: 5
   skip: true  # [win]
 
 requirements:
@@ -55,4 +55,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - duncanmmacleod
     - rhyspoulton
