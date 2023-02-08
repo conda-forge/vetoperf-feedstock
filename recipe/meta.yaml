@@ -1,5 +1,5 @@
 {% set name = "VetoPerf" %}
-{% set version = "3.0.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d08ffe7bdea80b7be258089f973ae3584bf56a04ae3dbc046948e1ee85ac4d2
+  sha256: dcedb230ed82505127bc62b558728d2e1d3197a4504ea4c0696310e961ed34ac
   patches:
     # use rootcling from build env when cross-compiling
     - rootcling-cross.patch  # [build_platform != target_platform]
@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 6
+  number: 0
   skip: true  # [win]
 
 requirements:
