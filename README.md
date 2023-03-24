@@ -1,11 +1,11 @@
-About vetoperf
-==============
+About vetoperf-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vetoperf-feedstock/blob/main/LICENSE.txt)
 
 Home: https://virgo.docs.ligo.org/virgoapp/VetoPerf/
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vetoperf-feedstock/blob/main/LICENSE.txt)
 
 Summary: VetoPerf is a software analysis tool designed to measure the performance of time-domain vetoes for gravitational-wave detectors.
 
