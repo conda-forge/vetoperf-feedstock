@@ -15,8 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 6
-  skip: true  # [osx and arm64]
+  number: 7
   skip: true  # [win]
 
 requirements:
