@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 10
+  number: 11
   skip: true  # [win]
 
 requirements:
