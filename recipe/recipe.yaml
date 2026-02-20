@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  name: VetoPerf
+  version: 3.2.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://git.ligo.org/virgo/virgoapp/${{ name }}/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
+  sha256: dcedb230ed82505127bc62b558728d2e1d3197a4504ea4c0696310e961ed34ac
+
+build:
+  number: 11
+  skip:
+    - win
+
+requirements:
+  build:
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
+    - cmake >=3.12.0
+    - make
+    - pkg-config
+  host:
+    - omicron >=4.0.0
+    - gwollum >=4.0.0
+    - root_base
+    - root_cxx_standard
+  run:
+    - omicron >=4.0.0
+    - gwollum >=4.0.0
+    - root_base
+
+tests:
+  - requirements:
+      run:
+        - pkg-config
+    script:
+      - vp-makeperf version
+      - pkg-config --print-errors --exact-version ${{ version }} ${{ name|lower }}
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: VetoPerf is a software analysis tool designed to measure the performance of time-domain vetoes for gravitational-wave detectors.
+  homepage: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
+  repository: https://git.ligo.org/virgo/virgoapp/${{ name }}
+  documentation: https://virgo.docs.ligo.org/virgoapp/${{ name }}/
+
+extra:
+  recipe-maintainers:
+    - duncanmmacleod
+    - FlorentRobinet
